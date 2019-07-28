@@ -1,0 +1,358 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+
+        .el-select .el-input {
+            width: 130px;
+        }
+
+        .input-with-select {
+            width: 500px;
+        }
+
+            .input-with-select .el-input-group__prepend {
+                background-color: #fff;
+            }
+
+        .el-btn-add {
+            float: right;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
+            <el-select v-model="select" slot="prepend" placeholder="请选择" v-on:change="obtainvalue">
+                <el-option v-for="item in options"
+                           :label="item.label"
+                           :value="item.value">
+                </el-option>
+            </el-select>
+            <el-button slot="append" icon="el-icon-search" v-on:click="search"></el-button>
+        </el-input>
+        <el-button type="primary" class="el-btn-add" v-on:click="addDialogVisible=true">新增用户</el-button>
+        <template>
+            <el-table :data="message"
+                      style="width: 100%">
+                <el-table-column prop="UserID"
+                                 label="用户编号"
+                                 width="170">
+                </el-table-column>
+                <el-table-column prop="UserName"
+                                 label="用户名"
+                                 width="170">
+                </el-table-column>
+                <el-table-column prop="UserPwd"
+                                 label="用户密码"
+                                 width="170">
+                </el-table-column>
+                <el-table-column prop="QQ"
+                                 label="用户QQ"
+                                 width="170">
+                </el-table-column>
+                <el-table-column prop="Phone"
+                                 label="用户手机"
+                                 width="170">
+                </el-table-column>
+                <el-table-column prop="Address"
+                                 label="用户籍贯"
+                                 width="160">
+                </el-table-column>
+                <el-table-column label="注册时间"
+                                 width="185">
+                    <template slot-scope="scope">
+                        <i class="el-icon-time"></i>
+                        <span style="margin-left: 3px">{{ scope.row.CreateTime }}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column prop="UserStatus"
+                                 label="用户状态"
+                                 width="160">
+                </el-table-column>
+                <el-table-column label="操作">
+                    <template slot-scope="scope">
+                        <!--scope.$index,scope.row.UserID,scope.row.UserName,scope.row.QQ,scope.row.Phone,scope.row.Address-->
+                        <el-button size="mini"
+                                   type="success"
+                                   v-on:click="modify(scope.$index,scope.row)">编辑</el-button>
+                        <el-button size="mini"
+                                   type="danger"
+                                   v-on:click="del(scope.$index,scope.row.UserID)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+        </template>
+        <div class="block">
+            <el-pagination background
+                           v-on:size-change="handleSizeChange"
+                           v-on:current-change="handleCurrentChange"
+                           :current-page="currentPage"
+                           :page-sizes="[100, 200, 300, 400]"
+                           :page-size="100"
+                           layout="total, sizes, prev, pager, next, jumper"
+                           :total="400">
+            </el-pagination>
+        </div>
+        <el-dialog title="修改"
+                   :visible.sync="centerDialogVisible"
+                   width="30%"
+                   center>
+            <el-form :model="form">
+                <el-form-item label="用户名：" :label-width="formLabelWidth">
+                    <el-input v-model="form.name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="用户密码：" :label-width="formLabelWidth">
+                    <el-input v-model="form.pwd" autocomplete="off" type="password" disabled="disabled"></el-input>
+                </el-form-item>
+                <el-form-item label="QQ：" :label-width="formLabelWidth">
+                    <el-input v-model="form.qq" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="手机号：" :label-width="formLabelWidth">
+                    <el-input v-model="form.phone" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="籍贯：" :label-width="formLabelWidth">
+                    <el-input v-model="form.address" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="注册时间：" :label-width="formLabelWidth">
+                    <el-input v-model="form.createtime" autocomplete="off" disabled="disabled"></el-input>
+                </el-form-item>
+                <el-form-item label="用户状态：" :label-width="formLabelWidth">
+                    <el-input v-model="form.userstatus" autocomplete="off" disabled="disabled"></el-input>
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button v-on:click="centerDialogVisible = false">取 消</el-button>
+                <el-button type="primary" v-on:click="determine">确 定</el-button>
+            </span>
+        </el-dialog>
+        <el-dialog title="新增用户"
+                   :visible.sync="addDialogVisible"
+                   width="30%"
+                   center>
+            <el-form :model="form">
+                <el-form-item label="用户名：" :label-width="formLabelWidth">
+                    <el-input v-model="addform.name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="用户密码：" :label-width="formLabelWidth">
+                    <el-input v-model="addform.pwd" autocomplete="off" type="password"></el-input>
+                </el-form-item>
+                <el-form-item label="QQ：" :label-width="formLabelWidth">
+                    <el-input v-model="addform.qq" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="手机号：" :label-width="formLabelWidth">
+                    <el-input v-model="addform.phone" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="籍贯：" :label-width="formLabelWidth">
+                    <el-input v-model="addform.address" autocomplete="off"></el-input>
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button v-on:click="addDialogVisible = false">取 消</el-button>
+                <el-button type="primary" v-on:click="add">新增</el-button>
+            </span>
+        </el-dialog>
+    </div>
+    <script>
+        var Main = {
+            data() {
+                return {
+                    message: [],
+                    index: -1,
+                    selectvalue: 0,
+                    centerDialogVisible: false,
+                    addDialogVisible: false,
+                    currentPage: 1,
+                    form: {
+                        "id": "",
+                        "name": "",
+                        "pwd": "",
+                        "qq": "",
+                        "phone": "",
+                        "address": "",
+                        "createtime": "",
+                        "userstatus": ""
+                    },
+                    addform: {
+                        "name": "",
+                        "pwd": "",
+                        "qq": "",
+                        "phone": "",
+                        "address": "",
+                    },
+                    formLabelWidth: '120px',
+                    input: "",
+                    select: '',
+                    options: [{ label: "用户名", value: 1 }, { label: "用户QQ", value: 2 }, { label: "用户手机", value: 3 }, { label: "用户籍贯", value: 4 }]
+                }
+            },
+            methods: {
+                send() {
+                    this.$http.get("/Home/Query").then((response) => {
+                        // console.log(response.body);
+                        this.message = response.body;
+                    }).catch(function (response) {
+                        console.log(response)
+                    })
+                },
+                //index, userid,name,qq,phone,address
+                modify(index, user) {
+                    //console.log(user);
+                    this.index = index;
+                    this.form.id = user.UserID;
+                    this.form.name = user.UserName;
+                    this.form.pwd = user.UserPwd;
+                    this.form.qq = user.QQ;
+                    this.form.phone = user.Phone;
+                    this.form.address = user.Address;
+                    this.form.createtime = user.CreateTime;
+                    this.form.userstatus = user.UserStatus;
+                    this.centerDialogVisible = true;
+                    //console.log(row);
+                },
+                del(index, userid) {
+                    this.$confirm('此操作将永久删除该数据, 是否继续?', '提示', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'warning',
+                        center: true
+                    }).then(() => {
+                        this.$http.post("/Home/DeleteEntity", { UserID: userid }, { emulateJSON: true }).then((response) => {
+                            if (response) {
+                                this.message.splice(index, 1);
+                                this.$message({
+                                    type: 'success',
+                                    message: '删除成功!'
+                                });
+                            }
+                            else {
+                                this.$message({
+                                    type: 'warning',
+                                    message: '删除失败!'
+                                });
+                            }
+                        }).catch((response) => {
+                            console.log(response);
+                            this.$message({
+                                type: 'warning',
+                                message: '删除失败!'
+                            });
+                        })
+                    }).catch(() => {
+                        this.$message({
+                            type: 'info',
+                            message: '已取消删除'
+                        });
+                    });
+                },
+                determine() {
+                    console.log(this.form);
+                    this.$http.post("/Home/UpdateEntity", { user: this.form, }, { emulateJSON: true }).then((response) => {
+                        if (response) {
+                            this.message[this.index].UserName = this.form.name;
+                            this.message[this.index].QQ = this.form.qq;
+                            this.message[this.index].Phone = this.form.phone;
+                            this.message[this.index].Address = this.form.address;
+                            this.centerDialogVisible = false;
+                            this.$message({
+                                type: 'success',
+                                message: '修改成功!'
+                            });
+                        }
+                        else {
+                            this.$message({
+                                type: 'error',
+                                message: '修改失败!'
+                            });
+                        }
+                    }).catch((response) => {
+                        console.log(response);
+                        this.$message({
+                            type: 'error',
+                            message: '修改失败!'
+                        });
+                    });
+
+                },
+                add() {
+                    this.$http.post("/Home/AddEntity", { userinfo: this.addform, }, { emulateJSON: true }).then((response) => {
+                        if (response) {
+                            var user = {
+                                UserID: this.message[this.message.length - 1].UserID + 1,
+                                UserName: this.addform.name,
+                                UserPwd: this.addform.pwd,
+                                QQ: this.addform.qq,
+                                Phone: this.addform.phone,
+                                Address: this.addform.address,
+                                CreateTime: new Date(),
+                                UserStatus: "0"
+                            }
+                            this.message.push(user);
+                            this.addform = {
+                                "name": "",
+                                "pwd": "",
+                                "qq": "",
+                                "phone": "",
+                                "address": "",
+                            }
+                            this.addDialogVisible = false;
+                            this.$message({
+                                type: 'success',
+                                message: '新增成功!'
+                            });
+                        }
+                        else {
+                            this.$message({
+                                type: 'error',
+                                message: '新增失败!'
+                            });
+                        }
+                    }).catch((response) => {
+                        console.log(response);
+                        this.$message({
+                            type: 'error',
+                            message: '新增失败!'
+                        });
+                    });
+                },
+                search() {
+                    this.$http.post("/Home/Search", { selectvalue: this.selectvalue, inputvalue: this.input }, { emulatejson: true }).then((response) => {
+
+                    }).catch((response) => {
+                        console.log(response);
+                    });
+                },
+                obtainvalue(value) {
+                    selectvalue = value;
+                },
+                handleCurrentChange(val) {
+                    console.log(`当前页 ${val} `);
+                },
+                handleSizeChange(val) {
+                    console.log(`每页: ${val}`);
+                }
+            },
+            created: function () {
+                this.send();
+            },
+        }
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    </script>
+</body>
+</html>
