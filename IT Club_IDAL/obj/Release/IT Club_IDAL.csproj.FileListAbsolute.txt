@@ -1,0 +1,17 @@
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_IDAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_IDAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\obj\Release\IT Club_IDAL.csprojAssemblyReference.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\obj\Release\IT Club_IDAL.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\obj\Release\IT Club_IDAL.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\obj\Release\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IDAL\obj\Release\IT Club_IDAL.pdb

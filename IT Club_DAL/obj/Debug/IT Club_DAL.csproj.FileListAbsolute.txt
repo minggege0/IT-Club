@@ -1,0 +1,39 @@
+E:\ASP.NET开发\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csprojAssemblyReference.cache
+E:\ASP.NET开发\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csproj.CoreCompileInputs.cache
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.dll.config
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.pdb
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\EntityFramework.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.pdb
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.dll.config
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.pdb
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.dll.config
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\EntityFramework.xml
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP.NET开发\IT Club\IT Club_DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csproj.CopyComplete
+E:\ASP.NET开发\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.dll
+E:\ASP.NET开发\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_DAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_IDAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csprojAssemblyReference.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\obj\Debug\IT Club_DAL.pdb

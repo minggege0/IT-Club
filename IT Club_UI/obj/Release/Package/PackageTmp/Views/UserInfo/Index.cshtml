@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <tr v-for="user in message">
+                <td>
+                    {{user.UserName}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message:[]
+            },
+            mounted() {
+                this.send()
+            },
+            methods: {
+                send() {
+                    this.$http.get("/UserInfo/Data").then((rsp) => {
+                        console.log(rsp.body);
+                        this.message = rsp.body;
+                    })
+                }
+            }
+        });
+            //function () {
+            //    $.ajax({
+            //        url: "/UserInfo/Query",
+            //    });
+            //}
+    </script>
+</body>
+</html>

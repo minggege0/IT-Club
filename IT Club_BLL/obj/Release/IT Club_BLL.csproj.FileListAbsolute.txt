@@ -1,0 +1,29 @@
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_BLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_BLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_BLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DALFactorys.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IBLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DALFactorys.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DALFactorys.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IBLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IBLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IDAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_IDAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\IT Club_DAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Release\IT Club_BLL.csprojAssemblyReference.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Release\IT Club_BLL.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Release\IT Club_BLL.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Release\IT Club_BLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Release\IT Club_BLL.pdb

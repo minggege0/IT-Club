@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITClubDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ArticleId" />
+    </Key>
+    <Property Name="ArticleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Words" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ReadCount" Type="Int32" Nullable="false" />
+    <Property Name="LikeCount" Type="Int32" Nullable="false" />
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="category" Relationship="Self.FK_Article_category" FromRole="Article" ToRole="category" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_Article_UserInfo" FromRole="Article" ToRole="UserInfo" />
+    <NavigationProperty Name="Collection" Relationship="Self.FK_Collection_Article" FromRole="Article" ToRole="Collection" />
+    <NavigationProperty Name="Like" Relationship="Self.FK_Like_Article" FromRole="Article" ToRole="Like" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Article_category" FromRole="category" ToRole="Article" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_category_UserInfo" FromRole="category" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Collection">
+    <Key>
+      <PropertyRef Name="CollectionId" />
+    </Key>
+    <Property Name="CollectionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ArticleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Collection_Article" FromRole="Collection" ToRole="Article" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_Collection_UserInfo" FromRole="Collection" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ArticleId" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Reply" Relationship="Self.FK_Reply_comment" FromRole="comment" ToRole="Reply" />
+  </EntityType>
+  <EntityType Name="Follow">
+    <Key>
+      <PropertyRef Name="FollowId" />
+    </Key>
+    <Property Name="FollowId" Type="Int32" Nullable="false" />
+    <Property Name="UserId_follow" Type="Int32" Nullable="false" />
+    <Property Name="UserId_attention" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_Follow_UserInfo" FromRole="Follow" ToRole="UserInfo" />
+    <NavigationProperty Name="UserInfo1" Relationship="Self.FK_Follow_UserInfo1" FromRole="Follow" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Like">
+    <Key>
+      <PropertyRef Name="LikeId" />
+    </Key>
+    <Property Name="LikeId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Like_Article" FromRole="Like" ToRole="Article" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_Like_UserInfo" FromRole="Like" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Name="NewsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId_main" Type="Int32" Nullable="false" />
+    <Property Name="NewsType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId_second" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_News_UserInfo" FromRole="News" ToRole="UserInfo" />
+    <NavigationProperty Name="UserInfo1" Relationship="Self.FK_News_UserInfo1" FromRole="News" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Reply">
+    <Key>
+      <PropertyRef Name="ReplyId" />
+    </Key>
+    <Property Name="ReplyId" Type="Int32" Nullable="false" />
+    <Property Name="UserId_main" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId_second" Type="Int32" Nullable="false" />
+    <Property Name="ReplyContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CommentId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="comment" Relationship="Self.FK_Reply_comment" FromRole="Reply" ToRole="comment" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_Reply_UserInfo" FromRole="Reply" ToRole="UserInfo" />
+    <NavigationProperty Name="UserInfo1" Relationship="Self.FK_Reply_UserInfo1" FromRole="Reply" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Avatar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Details" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Article_UserInfo" FromRole="UserInfo" ToRole="Article" />
+    <NavigationProperty Name="category" Relationship="Self.FK_category_UserInfo" FromRole="UserInfo" ToRole="category" />
+    <NavigationProperty Name="Collection" Relationship="Self.FK_Collection_UserInfo" FromRole="UserInfo" ToRole="Collection" />
+    <NavigationProperty Name="Follow" Relationship="Self.FK_Follow_UserInfo" FromRole="UserInfo" ToRole="Follow" />
+    <NavigationProperty Name="Follow1" Relationship="Self.FK_Follow_UserInfo1" FromRole="UserInfo" ToRole="Follow" />
+    <NavigationProperty Name="Like" Relationship="Self.FK_Like_UserInfo" FromRole="UserInfo" ToRole="Like" />
+    <NavigationProperty Name="News" Relationship="Self.FK_News_UserInfo" FromRole="UserInfo" ToRole="News" />
+    <NavigationProperty Name="News1" Relationship="Self.FK_News_UserInfo1" FromRole="UserInfo" ToRole="News" />
+    <NavigationProperty Name="Reply" Relationship="Self.FK_Reply_UserInfo" FromRole="UserInfo" ToRole="Reply" />
+    <NavigationProperty Name="Reply1" Relationship="Self.FK_Reply_UserInfo1" FromRole="UserInfo" ToRole="Reply" />
+  </EntityType>
+  <Association Name="FK_Article_category">
+    <End Role="category" Type="Self.category" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Article_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Collection_Article">
+    <End Role="Article" Type="Self.Article" Multiplicity="1" />
+    <End Role="Collection" Type="Self.Collection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Collection">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Like_Article">
+    <End Role="Article" Type="Self.Article" Multiplicity="1" />
+    <End Role="Like" Type="Self.Like" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Like">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_category_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="category" Type="Self.category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Collection_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Collection" Type="Self.Collection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Collection">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_comment">
+    <End Role="comment" Type="Self.comment" Multiplicity="1" />
+    <End Role="Reply" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comment">
+        <PropertyRef Name="CommentId" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="CommentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Follow_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Follow" Type="Self.Follow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Follow">
+        <PropertyRef Name="UserId_follow" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Follow_UserInfo1">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Follow" Type="Self.Follow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Follow">
+        <PropertyRef Name="UserId_attention" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Like_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Like" Type="Self.Like" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Like">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="UserId_main" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_UserInfo1">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="UserId_second" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Reply" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="UserId_main" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_UserInfo1">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Reply" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="UserId_second" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ITClubDBEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Article" EntityType="Self.Article" />
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="Collection" EntityType="Self.Collection" />
+    <EntitySet Name="comment" EntityType="Self.comment" />
+    <EntitySet Name="Follow" EntityType="Self.Follow" />
+    <EntitySet Name="Like" EntityType="Self.Like" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Reply" EntityType="Self.Reply" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+    <AssociationSet Name="FK_Article_category" Association="Self.FK_Article_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_UserInfo" Association="Self.FK_Article_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Collection_Article" Association="Self.FK_Collection_Article">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="Collection" EntitySet="Collection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Like_Article" Association="Self.FK_Like_Article">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="Like" EntitySet="Like" />
+    </AssociationSet>
+    <AssociationSet Name="FK_category_UserInfo" Association="Self.FK_category_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="category" EntitySet="category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Collection_UserInfo" Association="Self.FK_Collection_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Collection" EntitySet="Collection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_comment" Association="Self.FK_Reply_comment">
+      <End Role="comment" EntitySet="comment" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Follow_UserInfo" Association="Self.FK_Follow_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Follow" EntitySet="Follow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Follow_UserInfo1" Association="Self.FK_Follow_UserInfo1">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Follow" EntitySet="Follow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Like_UserInfo" Association="Self.FK_Like_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Like" EntitySet="Like" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_UserInfo" Association="Self.FK_News_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_UserInfo1" Association="Self.FK_News_UserInfo1">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_UserInfo" Association="Self.FK_Reply_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_UserInfo1" Association="Self.FK_Reply_UserInfo1">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

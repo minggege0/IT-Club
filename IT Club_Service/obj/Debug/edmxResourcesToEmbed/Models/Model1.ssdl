@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JJTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="16" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="16" />
+    <Property Name="QQ" Type="varchar" MaxLength="16" />
+    <Property Name="Phone" Type="varchar" MaxLength="16" />
+    <Property Name="Address" Type="varchar" MaxLength="64" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="UserStatus" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityContainer Name="JJTModelStoreContainer">
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

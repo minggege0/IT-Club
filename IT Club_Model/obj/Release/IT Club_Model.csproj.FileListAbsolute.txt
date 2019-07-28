@@ -1,0 +1,14 @@
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\obj\Release\IT Club_Model.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\obj\Release\IT Club_Model.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\obj\Release\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\obj\Release\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Model\obj\Release\IT Club_Model.csprojAssemblyReference.cache
