@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<objects>
-  <object name="UserInfoManager" type="IT_Club_BLL.UserInfoManager,IT Club_BLL">
-  </object>
-</objects>

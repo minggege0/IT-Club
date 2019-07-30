@@ -42,7 +42,6 @@ E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IBLL.pdb
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IBLL.dll.config
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Model.pdb
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Model.dll.config
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Newtonsoft.Json.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IDAL.pdb
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IDAL.dll.config
@@ -60,3 +59,4 @@ E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.SqlServer.dll
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.SqlServer.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Newtonsoft.Json.xml

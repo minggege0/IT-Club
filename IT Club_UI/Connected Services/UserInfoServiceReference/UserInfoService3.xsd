@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="DbParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:MarshalByRefObject">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="DbType" type="q2:DbType" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="Direction" type="q3:ParameterDirection" />
+          <xs:element minOccurs="0" name="IsNullable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ParameterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Precision" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="Scale" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="Size" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceColumn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceColumnNullMapping" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="SourceVersion" type="q4:DataRowVersion" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DbParameter" nillable="true" type="tns:DbParameter" />
+</xs:schema>

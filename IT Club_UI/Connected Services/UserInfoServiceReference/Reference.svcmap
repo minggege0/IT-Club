@@ -22,11 +22,16 @@
     <MetadataSource Address="https://localhost:44318/UserInfoService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="UserInfoService3.xsd" MetadataType="Schema" ID="e8c540e2-30ee-4f71-ac46-7c413a82d0b1" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd3" />
     <MetadataFile FileName="UserInfoService.wsdl" MetadataType="Wsdl" ID="f6ece1dd-3c5f-4cd8-8020-a5a7cd35d8d7" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?wsdl" />
+    <MetadataFile FileName="UserInfoService31.xsd" MetadataType="Schema" ID="9a3d6b15-6f0e-4bb4-8738-4380772b038d" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd7" />
+    <MetadataFile FileName="UserInfoService2.xsd" MetadataType="Schema" ID="c9e8ba5c-ac75-4cc6-bf9b-5a54123efc50" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserInfoService32.xsd" MetadataType="Schema" ID="c031f236-69a1-4bc5-bf8f-1c421ae1bb25" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd5" />
+    <MetadataFile FileName="UserInfoService1.xsd" MetadataType="Schema" ID="3315cc2e-2943-4147-8f04-653365372b41" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserInfoService33.xsd" MetadataType="Schema" ID="50026311-f407-4021-8915-b296357e87af" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd6" />
+    <MetadataFile FileName="UserInfoService34.xsd" MetadataType="Schema" ID="aa2b83ba-78d4-4395-92f9-f2a4db3eb986" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd4" />
     <MetadataFile FileName="UserInfoService.xsd" MetadataType="Schema" ID="505794ef-e626-4048-ae60-639a43e487ae" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd1" />
     <MetadataFile FileName="UserInfoService.disco" MetadataType="Disco" ID="21f3fbc5-3d22-46b4-ab83-c06c04ce5144" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?disco" />
-    <MetadataFile FileName="UserInfoService1.xsd" MetadataType="Schema" ID="3315cc2e-2943-4147-8f04-653365372b41" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd2" />
-    <MetadataFile FileName="UserInfoService2.xsd" MetadataType="Schema" ID="c9e8ba5c-ac75-4cc6-bf9b-5a54123efc50" SourceId="1" SourceUrl="https://localhost:44318/UserInfoService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

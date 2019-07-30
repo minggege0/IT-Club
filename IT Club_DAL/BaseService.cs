@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -12,17 +13,18 @@ namespace IT_Club_DAL
 {
     public class BaseService<T> where T : class, new()
     {
+        //使数据库上下文类为线程唯一
         DbContext db = DBContextFactory.CreateDbContext();
         /// <summary>
         /// 查询
         /// </summary>
         /// <param name="whereLambda"></param>
         /// <returns></returns>
-      public IQueryable<T> Query(Expression<Func<T, bool>> whereLambda)
+        public IQueryable<T> Query(Expression<Func<T,bool>> whereLambda)
         {
-            if (whereLambda != null)
+            if (whereLambda!=null)
             {
-                return db.Set<T>().Where(whereLambda);
+               return db.Set<T>().Where(whereLambda);
             }
             return db.Set<T>();
         }
@@ -39,7 +41,16 @@ namespace IT_Club_DAL
         /// <returns></returns>
         public IQueryable<T> PageQuery<s>(int PageIndex, int PageSize, out int TotalCount, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderbyLambda, bool isAsc)
         {
-            var temp = db.Set<T>().Where(whereLambda);
+            IQueryable<T> temp;
+            if (whereLambda!=null)
+            {
+                temp = db.Set<T>().Where(whereLambda);
+            }
+            else
+            {
+                temp = db.Set<T>();
+            }
+            
             TotalCount = temp.Count();
             if (isAsc)
             {
@@ -58,7 +69,7 @@ namespace IT_Club_DAL
         /// <returns></returns>
         public bool AddEntity(T entity)
         {
-            db.Entry<T>(entity).State =EntityState.Added;
+            db.Entry<T>(entity).State = EntityState.Added;
             return true;
         }
         /// <summary>
@@ -82,5 +93,5 @@ namespace IT_Club_DAL
             return true;
         }
     }
-   
+
 }

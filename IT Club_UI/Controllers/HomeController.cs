@@ -7,12 +7,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using IT_Club_UI.UserInfoServiceReference;
-using Newtonsoft.Json;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace IT_Club_UI.Controllers
 {
-
     public class HomeController : Controller
     {
         #region 注释
@@ -37,7 +36,10 @@ namespace IT_Club_UI.Controllers
         /// <returns></returns>
         public string Query()
         {
-            return serviceClient.Query(null);
+            if (Request["pars[inputvalue]"] == null)
+                return serviceClient.Query(Request["pars[pageindex]"], Request["pars[pagesize]"], null, null);
+            else
+                return serviceClient.Query(Request["pars[pageindex]"], Request["pars[pagesize]"], Request["pars[selectvalue]"], Request["pars[inputvalue]"]);
         }
         /// <summary>
         /// 删除数据
@@ -84,21 +86,5 @@ namespace IT_Club_UI.Controllers
             return serviceClient.AddEntity(user);
             #endregion
         }
-        //public string Search()
-        //{
-
-        //    switch (Request["selectvalue"])
-        //    {
-        //        case "1":
-        //            serviceClient.Query(y=>y);
-        //            break;
-        //        case "2":
-        //            break;
-        //        case "3":
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
     }
 }

@@ -1,6 +1,7 @@
 ﻿using IT_Club_Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.Serialization;
@@ -13,11 +14,10 @@ namespace IT_Club_Services
     [ServiceContract]
     public interface IUserInfoService
     {
-        [OperationContract]
-        //Expression<Func<UserInfo, bool>> whereLambda
-        string Query(string name);
-        [OperationContract]
-        string PageQuery<s>(int PageIndex, int PageSize, out int TotalCount, Expression<Func<UserInfo, bool>> whereLambda, Expression<Func<UserInfo, s>> orderbyLambda, bool isAsc);
+        [OperationContract(Name = "ExecuteQuery")]
+        string Query(string sqlStr,params SqlParameter[]pars);
+        [OperationContract(Name ="Query")]
+        string Query(string pageindex,string pagesize,string obj,string value);
         [OperationContract]
         bool DeleteEntity(UserInfo User);
         [OperationContract]

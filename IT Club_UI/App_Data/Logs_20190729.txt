@@ -1,0 +1,159 @@
+2019-07-29 13:35:47,084 [13] ERROR errorMsg - System.ServiceModel.CommunicationException: 尝试对参数 http://tempuri.org/ 进行序列化时出错: pars。InnerException 消息是“数据协定名称为“string:http://www.w3.org/2001/XMLSchema”的类型“System.Data.SqlTypes.SqlString”不是所需的类型。请考虑使用 DataContractResolver（如果你正在使用 DataContractSerializer），或将任何未知类型以静态方式添加到已知类型的列表。例如，可以使用 KnownTypeAttribute 属性，或者将未知类型添加到传递给序列化程序的已知类型列表。”。有关详细信息，请参见 InnerException。 ---> System.Runtime.Serialization.SerializationException: 数据协定名称为“string:http://www.w3.org/2001/XMLSchema”的类型“System.Data.SqlTypes.SqlString”不是所需的类型。请考虑使用 DataContractResolver（如果你正在使用 DataContractSerializer），或将任何未知类型以静态方式添加到已知类型的列表。例如，可以使用 KnownTypeAttribute 属性，或者将未知类型添加到传递给序列化程序的已知类型列表。
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeAndVerifyType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, Boolean verifyKnownType, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithXsiType(XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle objectTypeHandle, Type objectType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerializeReference(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 WriteSqlParameterToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , ClassDataContract )
+   在 System.Runtime.Serialization.ClassDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 WriteArrayOfSqlParameterToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , CollectionDataContract )
+   在 System.Runtime.Serialization.CollectionDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.DataContractSerializer.InternalWriteObjectContent(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.DataContractSerializer.InternalWriteObject(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.XmlObjectSerializer.WriteObjectHandleExceptions(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.XmlObjectSerializer.WriteObject(XmlDictionaryWriter writer, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameterPart(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameterPart(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameter(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameters(XmlDictionaryWriter writer, PartInfo[] parts, Object[] parameters)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeBody(XmlDictionaryWriter writer, MessageVersion version, String action, MessageDescription messageDescription, Object returnValue, Object[] parameters, Boolean isRequest)
+   在 System.ServiceModel.Dispatcher.OperationFormatter.SerializeBodyContents(XmlDictionaryWriter writer, MessageVersion version, Object[] parameters, Object returnValue, Boolean isRequest)
+   在 System.ServiceModel.Dispatcher.OperationFormatter.OperationFormatterMessage.OperationFormatterBodyWriter.OnWriteBodyContents(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.BodyWriterMessage.OnWriteBodyContents(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.Message.OnWriteMessage(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.BufferedMessageWriter.WriteMessage(Message message, BufferManager bufferManager, Int32 initialOffset, Int32 maxSizeQuota)
+   在 System.ServiceModel.Channels.TextMessageEncoderFactory.TextMessageEncoder.WriteMessage(Message message, Int32 maxMessageSize, BufferManager bufferManager, Int32 messageOffset)
+   在 System.ServiceModel.Channels.HttpOutput.SerializeBufferedMessage(Message message, Boolean shouldRecycleBuffer)
+   在 System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   在 System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 IT_Club_UI.UserInfoServiceReference.IUserInfoService.Query(String sqlStr, SqlParameter[] pars)
+   在 IT_Club_UI.UserInfoServiceReference.UserInfoServiceClient.Query(String sqlStr, SqlParameter[] pars) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Connected Services\UserInfoServiceReference\Reference.cs:行号 71
+   在 IT_Club_UI.Controllers.HomeController.Query() 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Controllers\HomeController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2019-07-29 13:36:12,034 [13] ERROR errorMsg - 1
+2019-07-29 13:37:52,845 [6] ERROR errorMsg - System.ServiceModel.CommunicationException: 尝试对参数 http://tempuri.org/ 进行序列化时出错: pars。InnerException 消息是“数据协定名称为“string:http://www.w3.org/2001/XMLSchema”的类型“System.Data.SqlTypes.SqlString”不是所需的类型。请考虑使用 DataContractResolver（如果你正在使用 DataContractSerializer），或将任何未知类型以静态方式添加到已知类型的列表。例如，可以使用 KnownTypeAttribute 属性，或者将未知类型添加到传递给序列化程序的已知类型列表。”。有关详细信息，请参见 InnerException。 ---> System.Runtime.Serialization.SerializationException: 数据协定名称为“string:http://www.w3.org/2001/XMLSchema”的类型“System.Data.SqlTypes.SqlString”不是所需的类型。请考虑使用 DataContractResolver（如果你正在使用 DataContractSerializer），或将任何未知类型以静态方式添加到已知类型的列表。例如，可以使用 KnownTypeAttribute 属性，或者将未知类型添加到传递给序列化程序的已知类型列表。
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeAndVerifyType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, Boolean verifyKnownType, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithXsiType(XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle objectTypeHandle, Type objectType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerializeReference(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 WriteSqlParameterToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , ClassDataContract )
+   在 System.Runtime.Serialization.ClassDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   在 WriteArrayOfSqlParameterToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , CollectionDataContract )
+   在 System.Runtime.Serialization.CollectionDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   在 System.Runtime.Serialization.DataContractSerializer.InternalWriteObjectContent(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.DataContractSerializer.InternalWriteObject(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.XmlObjectSerializer.WriteObjectHandleExceptions(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.XmlObjectSerializer.WriteObject(XmlDictionaryWriter writer, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameterPart(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameterPart(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameter(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameters(XmlDictionaryWriter writer, PartInfo[] parts, Object[] parameters)
+   在 System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeBody(XmlDictionaryWriter writer, MessageVersion version, String action, MessageDescription messageDescription, Object returnValue, Object[] parameters, Boolean isRequest)
+   在 System.ServiceModel.Dispatcher.OperationFormatter.SerializeBodyContents(XmlDictionaryWriter writer, MessageVersion version, Object[] parameters, Object returnValue, Boolean isRequest)
+   在 System.ServiceModel.Dispatcher.OperationFormatter.OperationFormatterMessage.OperationFormatterBodyWriter.OnWriteBodyContents(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.BodyWriterMessage.OnWriteBodyContents(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.Message.OnWriteMessage(XmlDictionaryWriter writer)
+   在 System.ServiceModel.Channels.BufferedMessageWriter.WriteMessage(Message message, BufferManager bufferManager, Int32 initialOffset, Int32 maxSizeQuota)
+   在 System.ServiceModel.Channels.TextMessageEncoderFactory.TextMessageEncoder.WriteMessage(Message message, Int32 maxMessageSize, BufferManager bufferManager, Int32 messageOffset)
+   在 System.ServiceModel.Channels.HttpOutput.SerializeBufferedMessage(Message message, Boolean shouldRecycleBuffer)
+   在 System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   在 System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 IT_Club_UI.UserInfoServiceReference.IUserInfoService.Query(String sqlStr, SqlParameter[] pars)
+   在 IT_Club_UI.UserInfoServiceReference.UserInfoServiceClient.Query(String sqlStr, SqlParameter[] pars) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Connected Services\UserInfoServiceReference\Reference.cs:行号 71
+   在 IT_Club_UI.Controllers.HomeController.Query() 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Controllers\HomeController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2019-07-29 13:38:08,378 [6] ERROR errorMsg - 2
+2019-07-29 18:07:30,010 [7] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 值不能为 null。
+参数名: predicate (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.ArgumentNullException: 值不能为 null。
+参数名: predicate
+   在 System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 IT_Club_DAL.BaseService`1.PageQuery[s](Int32 PageIndex, Int32 PageSize, Int32& TotalCount, Expression`1 whereLambda, Expression`1 orderbyLambda, Boolean isAsc) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\BaseService.cs:行号 44
+   在 IT_Club_BLL.BaseManager`1.PageQuery[s](Int32 PageIndex, Int32 PageSize, Int32& TotalCount, Expression`1 whereLambda, Expression`1 orderbyLambda, Boolean isAsc) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\BaseManager.cs:行号 33
+   在 IT_Club_Services.UserInfoService.Query(String obj, String value) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\UserInfoService.svc.cs:行号 67
+   在 SyncInvokeQuery(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dis...)。
+2019-07-29 18:07:42,322 [7] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 值不能为 null。
+参数名: predicate (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.ArgumentNullException: 值不能为 null。
+参数名: predicate
+   在 System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 IT_Club_DAL.BaseService`1.PageQuery[s](Int32 PageIndex, Int32 PageSize, Int32& TotalCount, Expression`1 whereLambda, Expression`1 orderbyLambda, Boolean isAsc) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_DAL\BaseService.cs:行号 44
+   在 IT_Club_BLL.BaseManager`1.PageQuery[s](Int32 PageIndex, Int32 PageSize, Int32& TotalCount, Expression`1 whereLambda, Expression`1 orderbyLambda, Boolean isAsc) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\BaseManager.cs:行号 33
+   在 IT_Club_Services.UserInfoService.Query(String obj, String value) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\UserInfoService.svc.cs:行号 67
+   在 SyncInvokeQuery(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dis...)。
+2019-07-29 21:57:30,956 [72] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 存储区更新、插入或删除语句影响到了意外的行数(0)。实体在加载后可能被修改或删除。有关了解和处理乐观并发异常的信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=472540。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: 存储区更新、插入或删除语句影响到了意外的行数(0)。实体在加载后可能被修改或删除。有关了解和处理乐观并发异常的信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=472540。 ----> System.Data.Entity.Core.OptimisticConcurrencyException: 存储区更新、插入或删除语句影响到了意外的行数(0)。实体在加载后可能被修改或删除。有关了解和处理乐观并发异常的信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=472540。
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity....)。

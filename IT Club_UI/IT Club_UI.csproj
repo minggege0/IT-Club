@@ -290,6 +290,21 @@
     <None Include="Connected Services\UserInfoServiceReference\UserInfoService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\UserInfoServiceReference\UserInfoService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserInfoServiceReference\UserInfoService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserInfoServiceReference\UserInfoService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserInfoServiceReference\UserInfoService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserInfoServiceReference\UserInfoService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

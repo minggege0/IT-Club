@@ -38,7 +38,7 @@
 <body>
     <div id="app">
         <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
-            <el-select v-model="select" slot="prepend" placeholder="请选择" v-on:change="obtainvalue">
+            <el-select v-model="selectvalue" slot="prepend" placeholder="请选择" v-on:change="obtainvalue">
                 <el-option v-for="item in options"
                            :label="item.label"
                            :value="item.value">
@@ -103,10 +103,9 @@
                            v-on:size-change="handleSizeChange"
                            v-on:current-change="handleCurrentChange"
                            :current-page="currentPage"
-                           :page-sizes="[100, 200, 300, 400]"
-                           :page-size="100"
+                           :page-sizes="pagesizes"
                            layout="total, sizes, prev, pager, next, jumper"
-                           :total="400">
+                           :total=total>
             </el-pagination>
         </div>
         <el-dialog title="修改"
@@ -174,7 +173,10 @@
                 return {
                     message: [],
                     index: -1,
-                    selectvalue: 0,
+                    selectvalue: "全部",
+                    total: 2,
+                    pagesizes: [1, 2, 3, 4],
+                    pagesize: 1,
                     centerDialogVisible: false,
                     addDialogVisible: false,
                     currentPage: 1,
@@ -198,21 +200,20 @@
                     formLabelWidth: '120px',
                     input: "",
                     select: '',
-                    options: [{ label: "用户名", value: 1 }, { label: "用户QQ", value: 2 }, { label: "用户手机", value: 3 }, { label: "用户籍贯", value: 4 }]
+                    options: [{ label: "全部", value: 0 }, { label: "用户名", value: 1 }, { label: "用户QQ", value: 2 }, { label: "用户手机", value: 3 }, { label: "用户籍贯", value: 4 }]
                 }
             },
             methods: {
+                //加载数据
                 send() {
-                    this.$http.get("/Home/Query").then((response) => {
-                        // console.log(response.body);
-                        this.message = response.body;
-                    }).catch(function (response) {
-                        console.log(response)
-                    })
+                    let pars = {
+                        pageindex: this.currentPage,
+                        pagesize: this.pagesize
+                    }
+                    this.pagequery(pars);
                 },
-                //index, userid,name,qq,phone,address
+                //编辑按钮，从表格传值到弹出框
                 modify(index, user) {
-                    //console.log(user);
                     this.index = index;
                     this.form.id = user.UserID;
                     this.form.name = user.UserName;
@@ -223,8 +224,8 @@
                     this.form.createtime = user.CreateTime;
                     this.form.userstatus = user.UserStatus;
                     this.centerDialogVisible = true;
-                    //console.log(row);
                 },
+                //删除数据
                 del(index, userid) {
                     this.$confirm('此操作将永久删除该数据, 是否继续?', '提示', {
                         confirmButtonText: '确定',
@@ -235,31 +236,26 @@
                         this.$http.post("/Home/DeleteEntity", { UserID: userid }, { emulateJSON: true }).then((response) => {
                             if (response) {
                                 this.message.splice(index, 1);
-                                this.$message({
-                                    type: 'success',
-                                    message: '删除成功!'
-                                });
+                                this.mymessage('success', '删除成功！');
+                                let pars = {
+                                    pageindex: 1,
+                                    pagesize: 1,
+                                }
+                                this.pagequery(pars);
+                                this.currentPage = 1;
                             }
                             else {
-                                this.$message({
-                                    type: 'warning',
-                                    message: '删除失败!'
-                                });
+                                this.mymessage('warning', '删除失败！');
                             }
                         }).catch((response) => {
                             console.log(response);
-                            this.$message({
-                                type: 'warning',
-                                message: '删除失败!'
-                            });
+                            this.mymessage('warning', '删除失败!');
                         })
                     }).catch(() => {
-                        this.$message({
-                            type: 'info',
-                            message: '已取消删除'
-                        });
+                        this.mymessage('info', '已取消删除!');
                     });
                 },
+                //点击弹出框的确定，修改数据
                 determine() {
                     console.log(this.form);
                     this.$http.post("/Home/UpdateEntity", { user: this.form, }, { emulateJSON: true }).then((response) => {
@@ -282,27 +278,19 @@
                         }
                     }).catch((response) => {
                         console.log(response);
-                        this.$message({
-                            type: 'error',
-                            message: '修改失败!'
-                        });
+                        this.mymessage('error', '修改失败');
                     });
 
                 },
+                //添加数据
                 add() {
                     this.$http.post("/Home/AddEntity", { userinfo: this.addform, }, { emulateJSON: true }).then((response) => {
                         if (response) {
-                            var user = {
-                                UserID: this.message[this.message.length - 1].UserID + 1,
-                                UserName: this.addform.name,
-                                UserPwd: this.addform.pwd,
-                                QQ: this.addform.qq,
-                                Phone: this.addform.phone,
-                                Address: this.addform.address,
-                                CreateTime: new Date(),
-                                UserStatus: "0"
+                            let pars = {
+                                pageindex: 1,
+                                pagesize: 1,
                             }
-                            this.message.push(user);
+                            this.pagequery(pars);
                             this.addform = {
                                 "name": "",
                                 "pwd": "",
@@ -311,40 +299,86 @@
                                 "address": "",
                             }
                             this.addDialogVisible = false;
-                            this.$message({
-                                type: 'success',
-                                message: '新增成功!'
-                            });
+                            this.mymessage('success', '新增成功');
                         }
                         else {
-                            this.$message({
-                                type: 'error',
-                                message: '新增失败!'
-                            });
+                            this.mymessage('error', '新增失败');
                         }
                     }).catch((response) => {
                         console.log(response);
-                        this.$message({
-                            type: 'error',
-                            message: '新增失败!'
-                        });
+                        this.mymessage('error', '新增失败');
                     });
                 },
+                //根据分类，模糊查询数据
                 search() {
-                    this.$http.post("/Home/Search", { selectvalue: this.selectvalue, inputvalue: this.input }, { emulatejson: true }).then((response) => {
-
-                    }).catch((response) => {
-                        console.log(response);
-                    });
+                    let pars = {
+                        pageindex: 1,
+                        pagesize: 1,
+                        selectvalue: this.selectvalue,
+                        inputvalue: this.input
+                    }
+                    this.pagequery(pars);
+                    this.currentPage = 1;
+                    this.pagesize = 1;
                 },
+                //分类下拉框的改变事件
                 obtainvalue(value) {
                     selectvalue = value;
                 },
+                //分页组件索引改变时触发的事件
                 handleCurrentChange(val) {
-                    console.log(`当前页 ${val} `);
+                    this.currentPage = val;
+                    if (this.input == "") {
+                        let pars = {
+                            pageindex: val,
+                            pagesize: this.pagesize
+                        };
+                        this.pagequery(pars);
+                    } else {
+                        let pars = {
+                            pageindex: val,
+                            pagesize: this.pagesize,
+                            selctvalue: this.selectvalue,
+                            inputvalue: this.input
+                        }
+                        this.pagequery(pars);
+                    }
                 },
+                //分页组件Pagesize改变时触发的事件
                 handleSizeChange(val) {
-                    console.log(`每页: ${val}`);
+                    this.pagesize = val;
+                    if (this.input == "") {
+                        let pars = {
+                            pageindex: this.currentPage,
+                            pagesize: val
+                        };
+                        this.pagequery(pars);
+                    }
+                    else {
+                        let pars = {
+                            pageindex: this.currentPage,
+                            pagesize: val,
+                            selectvalue: this.selectvalue,
+                            inputvalue: this.input
+                        };
+                        this.pagequery(pars);
+                    }
+                },
+                //分页查询的请求方法
+                pagequery(pars) {
+                    this.$http.post("/Home/Query", { pars }, { emulateJSON: true }).then((response) => {
+                        this.total = response.body.total;
+                        this.message = response.body.user;
+                    }).catch((response) => {
+                        console.log(response);
+                    });
+                },
+                //消息提示方法
+                mymessage(type, message) {
+                    this.$message({
+                        type,
+                        message
+                    });
                 }
             },
             created: function () {

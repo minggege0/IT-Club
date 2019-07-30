@@ -4,9 +4,20 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IT_Club_Model" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Common" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlTypes" />
+      <xsd:import schemaLocation="https://localhost:44318/UserInfoService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/IT_Club_Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IUserInfoService_ExecuteQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuery" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_ExecuteQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQueryResponse" />
+  </wsdl:message>
   <wsdl:message name="IUserInfoService_Query_InputMessage">
     <wsdl:part name="parameters" element="tns:Query" />
   </wsdl:message>
@@ -32,6 +43,10 @@
     <wsdl:part name="parameters" element="tns:AddEntityResponse" />
   </wsdl:message>
   <wsdl:portType name="IUserInfoService">
+    <wsdl:operation name="ExecuteQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/ExecuteQuery" message="tns:IUserInfoService_ExecuteQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/ExecuteQueryResponse" message="tns:IUserInfoService_ExecuteQuery_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Query">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/Query" message="tns:IUserInfoService_Query_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/QueryResponse" message="tns:IUserInfoService_Query_OutputMessage" />
@@ -51,6 +66,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUserInfoService" type="tns:IUserInfoService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteQuery">
+      <soap:operation soapAction="http://tempuri.org/IUserInfoService/ExecuteQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Query">
       <soap:operation soapAction="http://tempuri.org/IUserInfoService/Query" style="document" />
       <wsdl:input>

@@ -15,11 +15,17 @@ namespace IT_Club_UI.UserInfoServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserInfoServiceReference.IUserInfoService")]
     public interface IUserInfoService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/Query", ReplyAction="http://tempuri.org/IUserInfoService/QueryResponse")]
-        string Query(string name);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/ExecuteQuery", ReplyAction="http://tempuri.org/IUserInfoService/ExecuteQueryResponse")]
+        string ExecuteQuery(string sqlStr, System.Data.SqlClient.SqlParameter[] pars);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/ExecuteQuery", ReplyAction="http://tempuri.org/IUserInfoService/ExecuteQueryResponse")]
+        System.Threading.Tasks.Task<string> ExecuteQueryAsync(string sqlStr, System.Data.SqlClient.SqlParameter[] pars);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/Query", ReplyAction="http://tempuri.org/IUserInfoService/QueryResponse")]
-        System.Threading.Tasks.Task<string> QueryAsync(string name);
+        string Query(string pageindex, string pagesize, string obj, string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/Query", ReplyAction="http://tempuri.org/IUserInfoService/QueryResponse")]
+        System.Threading.Tasks.Task<string> QueryAsync(string pageindex, string pagesize, string obj, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserInfoService/DeleteEntity", ReplyAction="http://tempuri.org/IUserInfoService/DeleteEntityResponse")]
         bool DeleteEntity(IT_Club_Model.UserInfo User);
@@ -67,12 +73,20 @@ namespace IT_Club_UI.UserInfoServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string Query(string name) {
-            return base.Channel.Query(name);
+        public string ExecuteQuery(string sqlStr, System.Data.SqlClient.SqlParameter[] pars) {
+            return base.Channel.ExecuteQuery(sqlStr, pars);
         }
         
-        public System.Threading.Tasks.Task<string> QueryAsync(string name) {
-            return base.Channel.QueryAsync(name);
+        public System.Threading.Tasks.Task<string> ExecuteQueryAsync(string sqlStr, System.Data.SqlClient.SqlParameter[] pars) {
+            return base.Channel.ExecuteQueryAsync(sqlStr, pars);
+        }
+        
+        public string Query(string pageindex, string pagesize, string obj, string value) {
+            return base.Channel.Query(pageindex, pagesize, obj, value);
+        }
+        
+        public System.Threading.Tasks.Task<string> QueryAsync(string pageindex, string pagesize, string obj, string value) {
+            return base.Channel.QueryAsync(pageindex, pagesize, obj, value);
         }
         
         public bool DeleteEntity(IT_Club_Model.UserInfo User) {

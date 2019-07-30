@@ -23,4 +23,3 @@ E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\bin\Debug\System.Buffers.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\bin\Debug\System.Memory.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\bin\Debug\Memcached.ClientLibrary.pdb
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\obj\Debug\IT Club_Common.csprojAssemblyReference.cache

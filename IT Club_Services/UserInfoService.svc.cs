@@ -10,6 +10,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ExpressionSerialization;
+using System.Xml.Serialization;
+using System.Data.SqlClient;
 
 namespace IT_Club_Services
 {
@@ -22,7 +24,6 @@ namespace IT_Club_Services
 
         public bool AddEntity(UserInfo User)
         {
-
             #region 添加
             if (UserInfoManager.AddEntity(User))
             {
@@ -42,16 +43,16 @@ namespace IT_Club_Services
             return false;
             #endregion
         }
-        //Expression<Func<UserInfo, bool>> whereLambda
-        public string Query(string name)
+        public string Query(string sqlStr, params SqlParameter[] pars)
         {
             #region 查询
-            if (name != null)
-            {
-                return JsonConvert.SerializeObject(UserInfoManager.Query(x=>x.UserName==name));
-            }
-            return JsonConvert.SerializeObject(UserInfoManager.Query(null));
+            return JsonConvert.SerializeObject(UserInfoManager.ExecuteQuery(sqlStr, pars));
             #endregion
+        }
+        public string Query(string pageindex, string pagesize, string obj, string value)
+        {
+            var User = UserInfoManager.LoadPageEntity(pageindex, pagesize, obj, value, out int Total);
+            return JsonConvert.SerializeObject(new { total = Total, user = User });
         }
 
         public bool UpdateEntity(UserInfo User)
@@ -62,12 +63,6 @@ namespace IT_Club_Services
                 return true;
             }
             return false;
-            #endregion
-        }
-        public string PageQuery<s>(int PageIndex, int PageSize, out int TotalCount, Expression<Func<UserInfo, bool>> whereLambda, Expression<Func<UserInfo, s>> orderbyLambda, bool isAsc)
-        {
-            #region 分页
-            return JsonConvert.SerializeObject(UserInfoManager.PageQuery<s>(PageIndex, PageSize, out TotalCount, whereLambda, orderbyLambda, isAsc));
             #endregion
         }
     }
