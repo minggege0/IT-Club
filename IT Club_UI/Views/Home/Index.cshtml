@@ -16,6 +16,40 @@
     <!-- 引入组件库 -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <style>
+        .el-header, .el-footer {
+            background-color: #20a0ff;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+            height:680px;
+        }
+
+        .el-main {
+            background-color: #E9EEF3;
+            color: #333;
+        }
+
+        body > .el-container {
+            margin-bottom: 40px;
+        }
+
+        .el-container:nth-child(5) .el-aside,
+        .el-container:nth-child(6) .el-aside {
+            line-height: 260px;
+        }
+
+        .el-container:nth-child(7) .el-aside {
+            line-height: 320px;
+        }
+
+
 
         .el-select .el-input {
             width: 130px;
@@ -30,84 +64,136 @@
             }
 
         .el-btn-add {
-            float: right;
-            margin-right: 30px;
+          margin-bottom:20px;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
-            <el-select v-model="selectvalue" slot="prepend" placeholder="请选择" v-on:change="obtainvalue">
-                <el-option v-for="item in options"
-                           :label="item.label"
-                           :value="item.value">
-                </el-option>
-            </el-select>
-            <el-button slot="append" icon="el-icon-search" v-on:click="search"></el-button>
-        </el-input>
-        <el-button type="primary" class="el-btn-add" v-on:click="addDialogVisible=true">新增用户</el-button>
-        <template>
-            <el-table :data="message"
-                      style="width: 100%">
-                <el-table-column prop="UserID"
-                                 label="用户编号"
-                                 width="170">
-                </el-table-column>
-                <el-table-column prop="UserName"
-                                 label="用户名"
-                                 width="170">
-                </el-table-column>
-                <el-table-column prop="UserPwd"
-                                 label="用户密码"
-                                 width="170">
-                </el-table-column>
-                <el-table-column prop="QQ"
-                                 label="用户QQ"
-                                 width="170">
-                </el-table-column>
-                <el-table-column prop="Phone"
-                                 label="用户手机"
-                                 width="170">
-                </el-table-column>
-                <el-table-column prop="Address"
-                                 label="用户籍贯"
-                                 width="160">
-                </el-table-column>
-                <el-table-column label="注册时间"
-                                 width="185">
-                    <template slot-scope="scope">
-                        <i class="el-icon-time"></i>
-                        <span style="margin-left: 3px">{{ scope.row.CreateTime }}</span>
-                    </template>
-                </el-table-column>
-                <el-table-column prop="UserStatus"
-                                 label="用户状态"
-                                 width="160">
-                </el-table-column>
-                <el-table-column label="操作">
-                    <template slot-scope="scope">
-                        <!--scope.$index,scope.row.UserID,scope.row.UserName,scope.row.QQ,scope.row.Phone,scope.row.Address-->
-                        <el-button size="mini"
-                                   type="success"
-                                   v-on:click="modify(scope.$index,scope.row)">编辑</el-button>
-                        <el-button size="mini"
-                                   type="danger"
-                                   v-on:click="del(scope.$index,scope.row.UserID)">删除</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
-        </template>
-        <div class="block">
-            <el-pagination background
-                           v-on:size-change="handleSizeChange"
-                           v-on:current-change="handleCurrentChange"
-                           :current-page="currentPage"
-                           :page-sizes="pagesizes"
-                           layout="total, sizes, prev, pager, next, jumper"
-                           :total=total>
-            </el-pagination>
-        </div>
+        <el-container>
+            <el-header>IT Club</el-header>
+            <el-container>
+                <el-aside width="210px">
+                    <el-menu default-active="2"
+                             class="el-menu-vertical-demo"
+                             v-on:open="handleOpen"
+                             v-on:close="handleClose"
+                             background-color="#545c64"
+                             text-color="#fff"
+                             active-text-color="#ffd04b">
+                        <el-submenu index="1">
+                            <template slot="title">
+                                <i class="el-icon-location"></i>
+                                <span>导航一</span>
+                            </template>
+                            <el-menu-item-group>
+                                <template slot="title">
+                                    分组一
+                                </template>
+                                <el-menu-item index="1-1">选项1</el-menu-item>
+                                <el-menu-item index="1-2">选项2</el-menu-item>
+                            </el-menu-item-group>
+                            <el-menu-item-group title="分组2">
+                                <el-menu-item index="1-3">选项3</el-menu-item>
+                            </el-menu-item-group>
+                            <el-submenu index="1-4">
+                                <template slot="title">
+                                    选项4
+                                </template>
+                                <el-menu-item index="1-4-1">选项1</el-menu-item>
+                            </el-submenu>
+                        </el-submenu>
+                        <el-menu-item index="2">
+                            <i class="el-icon-menu"></i>
+                            <span slot="title">导航二</span>
+                        </el-menu-item>
+                        <el-menu-item index="3">
+                            <i class="el-icon-document"></i>
+                            <span slot="title">导航三</span>
+                        </el-menu-item>
+                        <el-menu-item index="4">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">导航四</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-aside>
+                <el-container>
+                    <el-main>
+                        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
+                            <el-select v-model="selectvalue" slot="prepend" placeholder="请选择" v-on:change="obtainvalue">
+                                <el-option v-for="item in options"
+                                           :label="item.label"
+                                           :value="item.value">
+                                </el-option>
+                            </el-select>
+                            <el-button slot="append" icon="el-icon-search" v-on:click="search"></el-button>
+                        </el-input>
+                        <el-button type="primary" class="el-btn-add" v-on:click="addDialogVisible=true">新增用户</el-button>
+                        <template>
+                            <el-table :data="message">
+                                <el-table-column prop="UserID"
+                                                 label="用户编号"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column prop="UserName"
+                                                 label="用户名"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column prop="UserPwd"
+                                                 label="用户密码"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column prop="QQ"
+                                                 label="用户QQ"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column prop="Phone"
+                                                 label="用户手机"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column prop="Address"
+                                                 label="用户籍贯"
+                                                 width="120">
+                                </el-table-column>
+                                <el-table-column label="注册时间"
+                                                 width="190">
+                                    <template slot-scope="scope">
+                                        <i class="el-icon-time"></i>
+                                        <span style="margin-left: 3px">{{ scope.row.CreateTime }}</span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="UserStatus"
+                                                 label="用户状态"
+                                                 width="100">
+                                </el-table-column>
+                                <el-table-column label="操作">
+                                    <template slot-scope="scope">
+                                        <!--scope.$index,scope.row.UserID,scope.row.UserName,scope.row.QQ,scope.row.Phone,scope.row.Address-->
+                                        <el-button size="mini"
+                                                   type="success"
+                                                   v-on:click="modify(scope.$index,scope.row)">编辑</el-button>
+                                        <el-button size="mini"
+                                                   type="danger"
+                                                   v-on:click="del(scope.$index,scope.row.UserID)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                            </el-table>
+                        </template>
+                        <div class="block">
+                            <el-pagination background
+                                           v-on:size-change="handleSizeChange"
+                                           v-on:current-change="handleCurrentChange"
+                                           :current-page="currentPage"
+                                           :page-sizes="pagesizes"
+                                           layout="total, sizes, prev, pager, next, jumper"
+                                           :total=total>
+                            </el-pagination>
+                        </div>
+                    </el-main>
+                    <el-footer>Footer</el-footer>
+                </el-container>
+            </el-container>
+        </el-container>
         <el-dialog title="修改"
                    :visible.sync="centerDialogVisible"
                    width="30%"
@@ -379,7 +465,14 @@
                         type,
                         message
                     });
+                },
+                handleOpen(key, keyPath) {
+                    console.log(key, keyPath);
+                },
+                handleClose(key, keyPath) {
+                    console.log(key, keyPath);
                 }
+
             },
             created: function () {
                 this.send();

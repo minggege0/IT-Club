@@ -19,9 +19,7 @@ namespace IT_Club_Services
     // 注意: 为了启动 WCF 测试客户端以测试此服务，请在解决方案资源管理器中选择 UserInfoService.svc 或 UserInfoService.svc.cs，然后开始调试。
     public class UserInfoService : IUserInfoService
     {
-
         IUserInfoManager UserInfoManager = new UserInfoManager();
-
         public bool AddEntity(UserInfo User)
         {
             #region 添加
@@ -54,7 +52,6 @@ namespace IT_Club_Services
             var User = UserInfoManager.LoadPageEntity(pageindex, pagesize, obj, value, out int Total);
             return JsonConvert.SerializeObject(new { total = Total, user = User });
         }
-
         public bool UpdateEntity(UserInfo User)
         {
             #region 修改
