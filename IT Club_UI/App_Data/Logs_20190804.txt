@@ -1,0 +1,127 @@
+2019-08-04 10:34:08,991 [10] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 值不能为 null。
+参数名: s (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.ArgumentNullException: 值不能为 null。
+参数名: s
+   在 System.IO.StringReader..ctor(String s)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel....)。
+2019-08-04 10:34:15,249 [10] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 值不能为 null。
+参数名: s (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.ArgumentNullException: 值不能为 null。
+参数名: s
+   在 System.IO.StringReader..ctor(String s)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel....)。
+2019-08-04 22:04:17,862 [6] ERROR errorMsg - System.TimeoutException: 请求通道在等待 00:00:59.9610199 以后答复时超时。增加传递给请求调用的超时值，或者增加绑定上的 SendTimeout 值。分配给此操作的时间可能已经是更长超时的一部分。 ---> System.TimeoutException: 对“http://localhost:61146/ProductService.svc”的 HTTP 请求已超过为 00:01:00 分配的超时。为此操作分配的时间可能是较长超时的一部分。 ---> System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   在 System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   在 System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- 内部异常堆栈跟踪的结尾 ---
+
+Server stack trace: 
+   在 System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   在 System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 IT_Club_UI.ProductServiceReference.IProductService.CreateIndex(Product product)
+   在 IT_Club_UI.ProductServiceReference.ProductServiceClient.CreateIndex(Product product) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Connected Services\ProductServiceReference\Reference.cs:行号 59
+   在 IT_Club_UI.Controllers.SearchController.CreateIndex() 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Controllers\SearchController.cs:行号 31
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2019-08-04 22:47:59,012 [8] ERROR errorMsg - System.IO.DirectoryNotFoundException: 未能找到路径“E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\bin\Dict\Dict.Dct”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 PanGu.Dict.WordDictionary.LoadFromBinFile(String fileName, String& verNumStr)
+   在 PanGu.Dict.WordDictionary.Load(String fileName, Boolean textFile, String& version)
+   在 PanGu.Segment.LoadDictionary()
+   在 PanGu.Segment.Init(String fileName)
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer.InitPanGuSegment()
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_UI.Models.CreateProductIndex.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Models\CreateProductIndex.cs:行号 104
+   在 IT_Club_UI.Controllers.SearchController.Search() 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Controllers\SearchController.cs:行号 21
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2019-08-04 22:49:25,103 [7] ERROR errorMsg - 1
+2019-08-04 23:40:05,045 [6] ERROR errorMsg - System.IO.DirectoryNotFoundException: 未能找到路径“E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\bin\Dict\Dict.Dct”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 PanGu.Dict.WordDictionary.LoadFromBinFile(String fileName, String& verNumStr)
+   在 PanGu.Dict.WordDictionary.Load(String fileName, Boolean textFile, String& version)
+   在 PanGu.Segment.LoadDictionary()
+   在 PanGu.Segment.Init(String fileName)
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer.InitPanGuSegment()
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_UI.Models.CreateProductIndex.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Models\CreateProductIndex.cs:行号 206
+   在 IT_Club_UI.Controllers.SearchController.Search() 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_UI\Controllers\SearchController.cs:行号 21
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)

@@ -30,7 +30,6 @@ namespace IT_Club_Services
             return false;
             #endregion
         }
-
         public bool DeleteEntity(UserInfo User)
         {
             #region 删除

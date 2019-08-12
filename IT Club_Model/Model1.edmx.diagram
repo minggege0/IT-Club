@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="0c2e198d1466487ea97a214b1ca335b7" Name="Diagram1">
         <EntityTypeShape EntityType="JJTModel.UserInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJTModel.Product" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

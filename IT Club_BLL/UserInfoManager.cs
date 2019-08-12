@@ -44,7 +44,6 @@ namespace IT_Club_BLL
                         User = PageQuery<int>(int.Parse(pageindex), int.Parse(pagesize), out Total, null, x => x.UserID, true);
                         break;
                 }
-
             }
             return User;
         }

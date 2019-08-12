@@ -13,6 +13,7 @@ namespace IT_Club_IDAL
         DbContext db { get; }
 
         IUserInfoService UserInfoService { get; set; }
+        IProductService ProductService { get; set; }
         bool SaveChanges();
         int ExecuteSql(string sqlStr,params SqlParameter[]pars);
         List<T> ExecuteQuery<T>(string sqlStr,params SqlParameter[]pars);

@@ -23,6 +23,7 @@ namespace IT_Club_DALFactorys
         }
 
         private IUserInfoService _userInfoService;
+        private IProductService _productService;
         public IUserInfoService UserInfoService
         {
             get
@@ -37,6 +38,18 @@ namespace IT_Club_DALFactorys
             set
             {
                 _userInfoService = value;
+            }
+        }
+        public IProductService ProductService {
+            get {
+                if (_productService == null)
+                {
+                    _productService = AbstractFactory.CreateProductService();
+                }
+                return _productService;
+            }
+            set {
+                _productService = value;
             }
         }
         /// <summary>

@@ -22,5 +22,6 @@ namespace IT_Club_UI.Models
         public string Address { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
         public string UserStatus { get; set; }
+        
     }
 }

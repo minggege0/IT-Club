@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        .el-input {
+            width: 430px;
+        }
+
+        .input-with-select .el-input-group__prepend {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-input placeholder="请输入内容" v-model="input" class="input-with-select">
+            <el-button slot="append" icon="el-icon-search" v-on:click="search"></el-button>
+        </el-input>
+        <el-button type="primary" v-on:click=createindex>创建索引库</el-button>
+        <div>
+            <ul v-for="product in message">
+                <li v-html="product.productname"></li>
+                <li v-html="product.productdesc"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var Main = {
+            data() {
+                return {
+                    message:[],
+                    input: ''
+                }
+            },
+            methods: {
+                search() {
+                    this.$http.get("/Search/Search", { params: { inputvalue: this.input } }).then((response) => {
+                        this.message = response.body;
+                    }).catch((response) => {
+                        console.log(response);
+                    });
+                },
+                createindex() {
+                    this.$http.get("/Search/CreateIndex").then((response) => {
+                        console.log("创建成功");
+                    }).catch((response) => {
+                        console.log(response);
+                    });
+                }
+            }
+        }
+        var Ctor = Vue.extend(Main)
+        new Ctor().$mount('#app')
+    </script>
+</body>
+</html>

@@ -29,6 +29,7 @@ namespace IT_Club_UI
         {
             //读取了配置文件中关于Log4Net的配置信息
             log4net.Config.XmlConfigurator.Configure();
+            LuceneSearchHelper.GetInstance().StartThread();
             MvcHandler.DisableMvcResponseHeader = true;
             RemoveWebFormEngines();
             AreaRegistration.RegisterAllAreas();

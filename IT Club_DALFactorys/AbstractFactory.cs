@@ -20,6 +20,10 @@ namespace IT_Club_DALFactorys
             string fullClassName = Namespace + ".UserInfoService";
             return CreateInstance(fullClassName) as IUserInfoService;
         }
+        public static IProductService CreateProductService() {
+            string fullClassName = Namespace + ".ProductService";
+            return CreateInstance(fullClassName) as IProductService;
+        }
         //public static IUserInfoDal CreateUserInfoDal()
         //{
         //    string fullClassName = NameSpace + ".UserInfoDal";

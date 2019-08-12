@@ -59,6 +59,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\IT Club_UI\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PanGu">
+      <HintPath>..\..\..\..\..\..\ASP.NET开发\CZBK.ItcastOA\Lib\PanGu.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />

@@ -26,5 +26,6 @@ namespace IT_Club_Model
         }
     
         public virtual DbSet<UserInfo> UserInfo { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
     }
 }

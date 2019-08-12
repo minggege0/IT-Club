@@ -17,23 +17,3 @@ E:\ASP.NET开发\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.csproj.CoreCompileI
 E:\ASP.NET开发\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.csproj.CopyComplete
 E:\ASP.NET开发\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.dll
 E:\ASP.NET开发\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.pdb
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IBLL.dll.config
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IBLL.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IBLL.pdb
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\EntityFramework.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\EntityFramework.SqlServer.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IDAL.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_Model.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IDAL.pdb
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_IDAL.dll.config
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_Model.pdb
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\IT Club_Model.dll.config
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\EntityFramework.xml
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\EntityFramework.SqlServer.xml
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.csprojAssemblyReference.cache
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.csproj.CoreCompileInputs.cache
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.csproj.CopyComplete
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.dll
-E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_IBLL\obj\Debug\IT Club_IBLL.pdb

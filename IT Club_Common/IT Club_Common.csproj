@@ -40,8 +40,21 @@
     <Reference Include="log4net">
       <HintPath>..\..\..\..\..\..\ASP.NET开发\memcacheddotnet\trunk\clientlib\src\clientlib\bin\2.0\Debug\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\..\..\..\..\..\ASP.NET开发\Lucene.Net_Demo\Lucene.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Memcached.ClientLibrary">
       <HintPath>..\..\..\..\..\..\ASP.NET开发\memcacheddotnet\trunk\clientlib\src\clientlib\bin\2.0\Debug\Memcached.ClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\ASP.NET开发\CZBK.ItcastOA\Lib\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight">
+      <HintPath>..\..\..\..\..\..\ASP.NET开发\CZBK.ItcastOA\Lib\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer">
+      <HintPath>..\..\..\..\..\..\ASP.NET开发\Lucene.Net_Demo\PanGu.Lucene.Analyzer.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>..\packages\ServiceStack.Common.5.5.0\lib\net45\ServiceStack.Common.dll</HintPath>
@@ -79,10 +92,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MemcacheHelper.cs" />
+    <Compile Include="PanGuHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IT Club_Model\IT Club_Model.csproj">
+      <Project>{DA761BCB-CFBA-4473-9180-CF9CB2458EC2}</Project>
+      <Name>IT Club_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

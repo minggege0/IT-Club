@@ -1,0 +1,185 @@
+2019-08-03 15:55:34,175 [7] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 值不能为 null。
+参数名: s (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.ArgumentNullException: 值不能为 null。
+参数名: s
+   在 System.IO.StringReader..ctor(String s)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 17
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel....)。
+2019-08-03 17:13:26,501 [6] ERROR errorMsg - 8
+2019-08-03 17:13:27,008 [6] ERROR errorMsg - 10
+2019-08-03 17:13:29,830 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:29,851 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:30,751 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:32,441 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:32,538 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:33,007 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:33,008 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:33,443 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:33,662 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:33,663 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:57,674 [6] ERROR errorMsg - 2
+2019-08-03 17:13:57,674 [6] ERROR errorMsg - 4
+2019-08-03 17:13:57,795 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:57,795 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:57,845 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:13:57,953 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
+2019-08-03 17:15:12,972 [6] ERROR errorMsg - 1
+2019-08-03 17:15:12,973 [6] ERROR errorMsg - 1
+2019-08-03 17:15:13,069 [6] ERROR errorMsg - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.IO.FileNotFoundException: 未能加载文件或程序集“PanGu, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 Lucene.Net.Analysis.PanGu.PanGuTokenizer..ctor(TextReader input)
+   在 Lucene.Net.Analysis.PanGu.PanGuAnalyzer.TokenStream(String fieldName, TextReader reader)
+   在 IT_Club_Common.PanGuHelper.PanguSplitword(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Common\PanGuHelper.cs:行号 18
+   在 IT_Club_BLL.ProductManager.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\ProductManager.cs:行号 64
+   在 IT_Club_Services.ProductService.Search(String msg) 位置 E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\ProductService.svc.cs:行号 24
+   在 SyncInvokeSearch(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.Servi...)。
