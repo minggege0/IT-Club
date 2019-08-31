@@ -9,7 +9,8 @@ using System.Web.Mvc;
 using IT_Club_UI.UserInfoServiceReference;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
-
+using System.Net.Http;
+using Newtonsoft.Json;
 namespace IT_Club_UI.Controllers
 {
     public class HomeController : Controller
@@ -85,6 +86,17 @@ namespace IT_Club_UI.Controllers
             };
             return serviceClient.AddEntity(user);
             #endregion
+        }
+        /// <summary>
+        /// WebAPIDemo 测试
+        /// </summary>
+        /// <returns></returns>
+        public string test() {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.GetAsync("https://localhost:44375/api/values").Result;
+            var list = response.Content.ReadAsAsync<List<UserInfo>>().Result;
+            return JsonConvert.SerializeObject(list);
         }
     }
 }

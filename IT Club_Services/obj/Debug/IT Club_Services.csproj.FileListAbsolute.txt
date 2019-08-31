@@ -1,0 +1,63 @@
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Services.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Services.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Services.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\csc.exe
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\csc.exe.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\csc.rsp
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\csi.exe
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\csi.rsp
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.AppContext.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.Collections.Immutable.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.IO.FileSystem.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\System.Reflection.Metadata.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\vbc.exe
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\vbc.exe.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\vbc.rsp
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\VBCSCompiler.exe
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\roslyn\VBCSCompiler.exe.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_BLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IBLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Newtonsoft.Json.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\PanGu.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DALFactorys.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_BLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_BLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IBLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IBLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IDAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_IDAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DALFactorys.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DALFactorys.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\IT Club_DAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.csprojAssemblyReference.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\obj\Debug\IT Club_Services.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_Services\bin\Newtonsoft.Json.xml

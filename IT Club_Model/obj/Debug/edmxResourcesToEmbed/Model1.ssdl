@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JJTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="64" />
+    <Property Name="ProductPic" Type="varchar" MaxLength="64" />
+    <Property Name="ProductPrice" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ProductDesc" Type="varchar" MaxLength="64" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="ExpireTime" Type="datetime" />
+    <Property Name="SalesVolume" Type="int" />
+    <Property Name="InventoryQuantity" Type="int" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="16" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="16" />
+    <Property Name="QQ" Type="varchar" MaxLength="16" />
+    <Property Name="Phone" Type="varchar" MaxLength="16" />
+    <Property Name="Address" Type="varchar" MaxLength="64" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="UserStatus" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityContainer Name="JJTModelStoreContainer">
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

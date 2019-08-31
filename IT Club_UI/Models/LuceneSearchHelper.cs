@@ -99,10 +99,10 @@ namespace IT_Club_UI.Models
             {
                 SearchContent content = queue.Dequeue();
                 writer.DeleteDocuments(new Term("id", content.id.ToString()));//删除
-                //if (content.LuceneTypeEnum == LuceneTypeEnum.Delete)
-                //{
-                //    continue;
-                //}
+                if (content.LuceneTypeEnum == LuceneTypeEnum.Delete)
+                {
+                    continue;
+                }
                 Document document = new Document();//表示一篇文档。
                 //Field.Store.YES:表示是否存储原值。只有当Field.Store.YES在后面才能用doc.Get("number")取出值来.Field.Index. NOT_ANALYZED:不进行分词保存
                 document.Add(new Field("id", content.id.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
@@ -137,9 +137,6 @@ namespace IT_Club_UI.Models
             BooleanQuery boolQuery = new BooleanQuery();
             boolQuery.Add(query, BooleanClause.Occur.SHOULD);
             boolQuery.Add(titleQuery, BooleanClause.Occur.SHOULD);
-            //query.Add(new Term("body","语言"));--可以添加查询条件，两者是add关系.顺序没有关系.
-            // query.Add(new Term("body", "大学生"));
-            //query.Add(new Term("body", kw));//body中含有kw的文章
             query.SetSlop(100);
             titleQuery.SetSlop(100);
             //多个查询条件的词之间的最大距离.在文章中相隔太远 也就无意义.（例如 “大学生”这个查询条件和"简历"这个查询条件之间如果间隔的词太多也就没有意义了。）

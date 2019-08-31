@@ -26,3 +26,42 @@ E:\ASP.NET开发\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.csproj.CoreCompileInp
 E:\ASP.NET开发\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.csproj.CopyComplete
 E:\ASP.NET开发\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.dll
 E:\ASP.NET开发\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_BLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_BLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_BLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\EntityFramework.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\EntityFramework.SqlServer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_Common.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DALFactorys.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IBLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IDAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_Model.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\Lucene.Net.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\PanGu.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\PanGu.Lucene.Analyzer.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\Memcached.ClientLibrary.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\PanGu.HighLight.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DAL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\log4net.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_Common.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DALFactorys.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DALFactorys.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IBLL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IBLL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IDAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_IDAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_Model.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_Model.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\EntityFramework.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\EntityFramework.SqlServer.xml
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\Memcached.ClientLibrary.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DAL.pdb
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\IT Club_DAL.dll.config
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.csprojAssemblyReference.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.csproj.CoreCompileInputs.cache
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.csproj.CopyComplete
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.dll
+E:\U盘\学习\asp.net\MVC5\IT Club\IT Club_BLL\obj\Debug\IT Club_BLL.pdb

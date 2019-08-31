@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseManager.cs" />
-    <Compile Include="IProductManager.cs" />
     <Compile Include="IUserInfoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
