@@ -27,6 +27,8 @@ namespace IT_Club_UI.Controllers
         }
         public int TestError()
         {
+            JJTEntities jjt = new JJTEntities();
+            jjt.UserInfo.Where(x=>x.UserName=="王明株");
             int a = 2;
             int b = 0;
             return a / b;
@@ -91,12 +93,13 @@ namespace IT_Club_UI.Controllers
         /// WebAPIDemo 测试
         /// </summary>
         /// <returns></returns>
-        public string test() {
+        public string test()
+        {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync("https://localhost:44375/api/values").Result;
-            var list = response.Content.ReadAsAsync<List<UserInfo>>().Result;
-            return JsonConvert.SerializeObject(list);
+            var list = response.Content.ReadAsStringAsync().Result;
+            return list;
         }
     }
 }

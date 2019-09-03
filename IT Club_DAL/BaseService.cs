@@ -42,7 +42,7 @@ namespace IT_Club_DAL
         public IQueryable<T> PageQuery<s>(int PageIndex, int PageSize, out int TotalCount, Expression<Func<T, bool>> whereLambda, Expression<Func<T, s>> orderbyLambda, bool isAsc)
         {
             IQueryable<T> temp;
-            if (whereLambda!=null)
+            if (whereLambda != null)
             {
                 temp = db.Set<T>().Where(whereLambda);
             }

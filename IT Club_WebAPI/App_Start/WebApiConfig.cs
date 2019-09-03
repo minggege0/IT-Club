@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace IT_Club_WebAPI
@@ -13,7 +14,8 @@ namespace IT_Club_WebAPI
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
-
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonMediaTypeFormatter());
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
